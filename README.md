@@ -1,4 +1,5 @@
 # Docker Image for PHP 7.2 (fpm)
+[![Build Status](https://travis-ci.org/tmtde/php72-fpm.svg?branch=master)](https://travis-ci.org/tmtde/php72-fpm)
 
 ## Description
 
