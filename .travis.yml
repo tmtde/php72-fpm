@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+  - docker
+
+install:
+  - docker build -t tmtde/fpm-72 .
+  - docker run -i -d tmtde/fpm-72
+
+script:
+  - docker ps | grep -q fpm-72
+  - docker run -i tmtde/fpm-72 php -v | grep -E "^PHP\s7\.2"
+  - docker run -i tmtde/fpm-72 composer --version
