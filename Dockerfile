@@ -33,7 +33,7 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 
 RUN set -xe; \
   apk --no-cache update && apk --no-cache upgrade \
-  && apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing gnu-libiconv \
+  && apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community gnu-libiconv \
   && apk add --no-cache $EXT_DEPS \
   && apk add --no-cache --virtual .build-deps $PHPIZE_DEPS \
   && docker-php-ext-configure xsl \
